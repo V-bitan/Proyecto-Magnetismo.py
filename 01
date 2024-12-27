@@ -1,0 +1,95 @@
+Código para Visualización de Gráficos
+Fuerza Magnética vs. Distancia:
+
+python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos para la fuerza magnética
+distancias = np.linspace(0.01, 0.2, 100)
+mu_0 = 4 * np.pi * 1e-7
+I1 = 10
+I2 = 10
+L = 2
+
+# Calcular fuerza magnética
+fuerzas_magneticas = (mu_0 * I1 * I2 * L) / (2 * np.pi * distancias)
+
+# Crear gráfico
+plt.figure(figsize=(10, 5))
+plt.plot(distancias, fuerzas_magneticas, label="Fuerza Magnética (N)")
+plt.xlabel("Distancia (m)")
+plt.ylabel("Fuerza Magnética (N)")
+plt.title("Fuerza Magnética vs. Distancia")
+plt.legend()
+plt.grid(True)
+plt.show()
+Eficiencia del Filtro:
+
+python
+import matplotlib.pyplot as plt
+
+# Datos de eficiencia del filtro
+escenarios = ["Escenario 1", "Escenario 2", "Escenario 3"]
+eficiencias = [90, 85, 95]
+
+# Crear gráfico de barras
+plt.figure(figsize=(10, 5))
+plt.bar(escenarios, eficiencias, color=['blue', 'green', 'red'])
+plt.xlabel("Escenarios")
+plt.ylabel("Eficiencia del Filtro (%)")
+plt.title("Eficiencia del Filtro en Diferentes Escenarios")
+plt.show()
+Presión del Agua Subterránea:
+
+python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Datos de presión del agua
+alturas = np.linspace(0, 20, 100)
+densidad_agua = 1000
+gravedad = 9.81
+
+# Calcular presión
+presiones = densidad_agua * gravedad * alturas
+
+# Crear gráfico
+plt.figure(figsize=(10, 5))
+plt.plot(alturas, presiones, label="Presión del Agua (N/m²)")
+plt.xlabel("Altura del Agua (m)")
+plt.ylabel("Presión (N/m²)")
+plt.title("Presión del Agua Subterránea vs. Altura")
+plt.legend()
+plt.grid(True)
+plt.show()
+Diferencia de Altura Medida por el Nivel de Burbuja:
+
+python
+import matplotlib.pyplot as plt
+
+# Datos de diferencia de altura
+puntos = ["Punto 1", "Punto 2", "Punto 3", "Punto 4", "Punto 5"]
+diferencias = [1.2, 1.8, 1.5, 2.0, 1.7]
+
+# Crear gráfico de dispersión
+plt.figure(figsize=(10, 5))
+plt.scatter(puntos, diferencias, color='purple')
+plt.xlabel("Puntos")
+plt.ylabel("Diferencia de Altura (m)")
+plt.title("Diferencia de Altura Medida por el Nivel de Burbuja")
+plt.grid(True)
+plt.show()
+import matplotlib.pyplot as plt
+
+# Datos de eficiencia del filtro
+escenarios = ["Escenario 1", "Escenario 2", "Escenario 3"]
+eficiencias = [90, 85, 95]
+
+# Crear gráfico de barras
+plt.figure(figsize=(10, 5))
+plt.bar(escenarios, eficiencias, color=['blue', 'green', 'red'])
+plt.xlabel("Escenarios")
+plt.ylabel("Eficiencia del Filtro (%)")
+plt.title("Eficiencia del Filtro en Diferentes Escenarios")
+plt.show()
